@@ -216,3 +216,6 @@ Análise concluída com sucesso!
 
 ## Arquivos gerados
 - `salarios_processados.csv`: Dataset limpo e processado
+
+
+> ✨ **Criado em:** 5 de ago. de 2025
