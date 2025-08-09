@@ -393,5 +393,4 @@ Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE) no repositório.
 *   **Relatório de Bugs e Sugestões de Features:** A forma preferencial de contato é através da abertura de uma **[Issue no GitHub](https://github.com/ESousa97/imersao-python-alura-agosto-2025/issues)**. Isso permite que a comunidade acompanhe e participe da discussão.
 *   **Contato Profissional:** Para outras questões, você pode entrar em contato com o autor através do [LinkedIn](https://www.linkedin.com/in/enoque-sousa-bb89aa168/).
 
-
 > ✨ **Criado em:** 5 de ago. de 2025 às 20:00
