@@ -68,32 +68,40 @@ O fluxo de dados pode ser visualizado através do seguinte diagrama:
 
 ```mermaid
 graph TD
-    A[🌐 Fonte de Dados Externa<br>(CSV Bruto no GitHub)] --> B{Estágio 1: Análise Exploratória<br>(py/aula1/aula_1.py)};
+    A["🌐 Fonte de Dados Externa<br/>(CSV Bruto no GitHub)"] --> B["📈 Estágio 1: Análise Exploratória<br/>(py/aula1/aula_1.py)"]
     
     subgraph "Pipeline Principal"
         direction LR
-        B -- Gera --> C[📊 Artefato 1<br>(salarios_processados.csv)];
-        C -- Consumido por --> D{Estágio 2: Limpeza e Preparação<br>(py/aula2/aula_2.py)};
-        D -- Gera --> E[🧹 Artefato 2<br>(dados_limpos_aula2.csv)];
-        E -- Consumido por --> F{Estágio 3: Visualização<br>(py/aula3/3_visualização.py)};
-        F -- Gera --> G[🌍 Artefato Final<br>(Globo Interativo - HTML)];
+        B --> C["📊 Artefato 1<br/>(salarios_processados.csv)"]
+        C --> D["🔧 Estágio 2: Limpeza e Preparação<br/>(py/aula2/aula_2.py)"]
+        D --> E["🧹 Artefato 2<br/>(dados_limpos_aula2.csv)"]
+        E --> F["📈 Estágio 3: Visualização<br/>(py/aula3/3_visualização.py)"]
+        F --> G["🌍 Artefato Final<br/>(Globo Interativo - HTML)"]
     end
-
+    
     subgraph "Processo Paralelo (Desafio)"
         direction LR
-        H[💡 Geração de Dados Fictícios] --> I{Desafio Luri<br>(py/aula2/DesafioLuri/desafio2_luri.py)};
-        I -- Gera --> J[📄 CSVs de Alunos];
+        H["💡 Geração de Dados Fictícios"] --> I["🎯 Desafio Luri<br/>(py/aula2/DesafioLuri/desafio2_luri.py)"]
+        I --> J["📄 CSVs de Alunos"]
     end
-
-    style A fill:#FF6B6B,stroke:#333,stroke-width:2px,color:#fff
-    style G fill:#4ECDC4,stroke:#333,stroke-width:2px,color:#fff
-    style J fill:#A8E6CF,stroke:#333,stroke-width:2px,color:#333
-    style C fill:#FFE66D,stroke:#333,stroke-width:1px
-    style E fill:#FFE66D,stroke:#333,stroke-width:1px
-    style B fill:#45B7D1,stroke:#333,stroke-width:2px,color:#fff
-    style D fill:#45B7D1,stroke:#333,stroke-width:2px,color:#fff
-    style F fill:#45B7D1,stroke:#333,stroke-width:2px,color:#fff
-    style I fill:#B8A9FF,stroke:#333,stroke-width:2px,color:#fff
+    
+    %% Estilos principais
+    style A fill:#FF6B6B,stroke:#333,stroke-width:3px,color:#fff
+    style G fill:#4ECDC4,stroke:#333,stroke-width:3px,color:#fff
+    style J fill:#A8E6CF,stroke:#333,stroke-width:3px,color:#333
+    
+    %% Artefatos intermediários
+    style C fill:#FFE66D,stroke:#FDCB6E,stroke-width:2px,color:#333
+    style E fill:#FFE66D,stroke:#FDCB6E,stroke-width:2px,color:#333
+    
+    %% Estágios de processamento
+    style B fill:#45B7D1,stroke:#333,stroke-width:3px,color:#fff
+    style D fill:#45B7D1,stroke:#333,stroke-width:3px,color:#fff
+    style F fill:#45B7D1,stroke:#333,stroke-width:3px,color:#fff
+    
+    %% Processo paralelo
+    style H fill:#B8A9FF,stroke:#6C5CE7,stroke-width:2px,color:#fff
+    style I fill:#B8A9FF,stroke:#6C5CE7,stroke-width:3px,color:#fff
 ```
 
 ### Detalhamento dos Componentes:
